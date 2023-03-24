@@ -1,14 +1,32 @@
 <script>
+import Card from "../components/Card/Card.svelte";
+import {phoneDetails} from "../utils/phoneDetails";
+const tcs=["A","ddjh","ghb","ygjhb"];
+
 </script>
 
 <svelte:head>
   <title>Home</title>
   <meta name="description" content="Svelte demo app" />
 </svelte:head>
-
+<container>
+{#each phoneDetails as phonedata}
+<single-container><Card name={phonedata.name} monthly={phonedata.monthly} oneOff={phonedata.oneOff} monthlyPriceBeforeSale={phonedata.monthlyPriceBeforeSale} oneOffPriceBeforeSale={phonedata.oneOffPriceBeforeSale} image={phonedata.image}/></single-container>
+{/each}
+</container>
 <section />
 
 <style>
+  container {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap:1rem;
+    padding:0;
+  }
+  single-container {
+    flex: 1;
+    padding: 16px;
+  }
   section {
     display: flex;
     flex-direction: column;
