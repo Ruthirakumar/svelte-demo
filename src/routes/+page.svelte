@@ -1,8 +1,9 @@
 <script>
-import Card from "../components/Card/Card.svelte";
-import {phoneDetails} from "../utils/phoneDetails";
-const tcs=["A","ddjh","ghb","ygjhb"];
-
+  import Card from "../components/Card/Card.svelte";
+  import Accordion from "$lib/components/accordion.svelte";
+  import { TermsAndConditionMock } from "../mock/accordion.mock";
+  import { phoneDetails } from "../utils/phoneDetails";
+  const tcs = ["A", "ddjh", "ghb", "ygjhb"];
 </script>
 
 <svelte:head>
@@ -10,18 +11,28 @@ const tcs=["A","ddjh","ghb","ygjhb"];
   <meta name="description" content="Svelte demo app" />
 </svelte:head>
 <container>
-{#each phoneDetails as phonedata}
-<single-container><Card name={phonedata.name} monthly={phonedata.monthly} oneOff={phonedata.oneOff} monthlyPriceBeforeSale={phonedata.monthlyPriceBeforeSale} oneOffPriceBeforeSale={phonedata.oneOffPriceBeforeSale} image={phonedata.image}/></single-container>
-{/each}
+  {#each phoneDetails as phonedata}
+    <single-container
+      ><Card
+        name={phonedata.name}
+        monthly={phonedata.monthly}
+        oneOff={phonedata.oneOff}
+        monthlyPriceBeforeSale={phonedata.monthlyPriceBeforeSale}
+        oneOffPriceBeforeSale={phonedata.oneOffPriceBeforeSale}
+        image={phonedata.image}
+      /></single-container
+    >
+  {/each}
 </container>
+<Accordion data={TermsAndConditionMock} />
 <section />
 
 <style>
   container {
-    display:grid;
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap:1rem;
-    padding:0;
+    grid-gap: 1rem;
+    padding: 0;
   }
   single-container {
     flex: 1;
@@ -37,21 +48,5 @@ const tcs=["A","ddjh","ghb","ygjhb"];
 
   h1 {
     width: 100%;
-  }
-
-  .welcome {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding: 0 0 calc(100% * 495 / 2048) 0;
-  }
-
-  .welcome img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    display: block;
   }
 </style>
