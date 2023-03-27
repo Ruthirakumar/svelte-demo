@@ -30,6 +30,7 @@
         monthlyPriceBeforeSale={phonedata.monthlyPriceBeforeSale}
         oneOffPriceBeforeSale={phonedata.oneOffPriceBeforeSale}
         image={phonedata.image}
+        bannerText={phonedata.banner_text}
       /></single-container
     >
   {/each}

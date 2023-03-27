@@ -19,6 +19,7 @@ export const phoneDetails = [
     oneOffPriceBeforeSale: "",
     availability: "In stock",
     image: logo2,
+    banner_text: "New",
   },
   {
     id: "2",
@@ -33,6 +34,7 @@ export const phoneDetails = [
     oneOffPriceBeforeSale: "",
     availability: "In stock",
     image: logo1,
+    banner_text: "SAVE £150",
   },
   {
     id: "3",
@@ -47,6 +49,7 @@ export const phoneDetails = [
     oneOffPriceBeforeSale: "",
     availability: "In stock",
     image: logo2,
+    banner_text: "SAVE £150",
   },
   {
     id: "4",
@@ -61,6 +64,7 @@ export const phoneDetails = [
     oneOffPriceBeforeSale: "",
     availability: "In stock",
     image: logo4,
+    banner_text: "",
   },
   {
     id: "5",
@@ -75,6 +79,7 @@ export const phoneDetails = [
     oneOffPriceBeforeSale: "$250.00",
     availability: "In stock",
     image: logo3,
+    banner_text: "",
   },
   {
     id: "6",
@@ -89,6 +94,7 @@ export const phoneDetails = [
     oneOffPriceBeforeSale: "",
     availability: "In stock",
     image: logo3,
+    banner_text: "SAVE £329",
   },
   {
     id: "7",
@@ -103,6 +109,7 @@ export const phoneDetails = [
     oneOffPriceBeforeSale: "",
     availability: "In stock",
     image: logo,
+    banner_text: "",
   },
   {
     id: "8",
@@ -117,6 +124,7 @@ export const phoneDetails = [
     oneOffPriceBeforeSale: "",
     availability: "In stock",
     image: logo,
+    banner_text: "",
   },
   {
     id: "9",
@@ -131,5 +139,6 @@ export const phoneDetails = [
     oneOffPriceBeforeSale: "",
     availability: "In stock",
     image: logo5,
+    banner_text: "",
   },
 ];

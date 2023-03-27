@@ -2,8 +2,7 @@
   import Card from "./Card.svelte";
 </script>
 
-<div class="card_panel" style="margin-left:124px">
-  <strong class="tileLabel">RECOMMENDED PLAN</strong>
+<div class="card_panel">
   <Card
     name={"Business essinalas"}
     monthly={"24 months"}
@@ -13,6 +12,7 @@
     image={"phonedata.image"}
     class="cardStyle"
     isButtonShow={true}
+    bannerText={"RECOMMENDED PLAN"}
   >
     <div class="tileHeader">
       <div class="tileHeaderCopy">
@@ -47,6 +47,7 @@
 <style>
   .card_panel {
     position: relative;
+    margin-left: 124px;
   }
   .card_panel :global(.cardStyle) {
     background-color: #f4f4f4;

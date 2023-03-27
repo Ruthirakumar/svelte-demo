@@ -4,7 +4,9 @@
     oneOff,
     monthlyPriceBeforeSale,
     oneOffPriceBeforeSale,
+    bannerText,
     image;
+
   export let isButtonShow = false;
   import logo from "$lib/images/iPhone.svg";
   $: height = "345px";
@@ -14,6 +16,10 @@
 </script>
 
 <card class={$$props.class}>
+  {#if bannerText}
+    <strong class="tileLabel">{bannerText}</strong>
+  {/if}
+
   <slot>
     <img
       src={image}
@@ -72,6 +78,7 @@
     border-radius: 12px;
     width: 302px;
     min-height: 500px;
+    position: relative;
   }
   card-footer {
     display: flex;
@@ -160,5 +167,17 @@
     font-weight: 400;
     text-align: center;
     color: #6d6e71;
+  }
+
+  .tileLabel {
+    position: absolute;
+    top: -16px;
+    right: 0px;
+    padding: 6px 16px;
+    background-color: #ffe600;
+    border-radius: 8px 8px 0;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 600;
   }
 </style>
