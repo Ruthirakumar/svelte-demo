@@ -1,9 +1,18 @@
 <script>
+  import { goto } from "$app/navigation";
+
   import Card from "../components/Card/Card.svelte";
   import Accordion from "$lib/components/accordion.svelte";
   import { TermsAndConditionMock } from "../mock/accordion.mock";
   import { phoneDetails } from "../utils/phoneDetails";
   const tcs = ["A", "ddjh", "ghb", "ygjhb"];
+
+  /**
+   * @param {string} productId
+   */
+  function goToPage(productId) {
+    goto(`/products/${productId}`);
+  }
 </script>
 
 <svelte:head>
@@ -12,7 +21,8 @@
 </svelte:head>
 <container>
   {#each phoneDetails as phonedata}
-    <single-container
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <single-container on:click={() => goToPage(phonedata.id)}
       ><Card
         name={phonedata.name}
         monthly={phonedata.monthly}
@@ -25,6 +35,7 @@
   {/each}
 </container>
 <Accordion data={TermsAndConditionMock} />
+
 <section />
 
 <style>
