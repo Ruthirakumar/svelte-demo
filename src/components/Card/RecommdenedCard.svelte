@@ -17,12 +17,12 @@
 
 <div class="card_panel">
   <Card
-    name={"sjkadkjsadnjk"}
-    monthly={"24 months"}
+    name={""}
+    monthly={""}
     oneOff={"$8.33"}
     monthlyPriceBeforeSale={"$53.00"}
     oneOffPriceBeforeSale={""}
-    image={"phonedata.image"}
+    image={""}
     class="cardStyle"
     isButtonShow={true}
     bannerText={""}
@@ -143,8 +143,6 @@
   .tileTagline {
     min-height: 20px;
     margin: 0 0 8px;
-    /* font-size: 0.875rem;
-      line-height: 1.25rem; */
     font-weight: 600;
   }
 

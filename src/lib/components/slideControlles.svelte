@@ -1,24 +1,12 @@
 <script>
   let currentPage = 1;
   const totalPages = 4;
-
-  function goToPage() {
-    currentPage = currentPage + 1;
-  }
-
-  function goToPage1() {
-    currentPage = currentPage - 1;
-  }
 </script>
 
 <div class="slide_controllers">
   <div class="pagination">
     <div class="paginationContainer">
-      <button
-        on:click={goToPage}
-        class="control_farward"
-        type="button"
-        aria-label="Next"
+      <button class="control_farward" type="button" aria-label="Next"
         ><svg
           class="icon"
           width="12"
@@ -39,12 +27,8 @@
         <div class="dot" class:selected={currentPage === i + 1} />
       {/each}
 
-      <button
-        on:click={goToPage1}
-        class="control_backward"
-        type="button"
-        aria-label="Next"
-        ><svg
+      <button class="control_backward" type="button" aria-label="Next">
+        <svg
           class="icon"
           width="12"
           height="8"
@@ -95,7 +79,6 @@
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    /* background-color: #007b85; */
     cursor: pointer;
     opacity: 1;
     pointer-events: none;
@@ -110,7 +93,6 @@
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    /* background-color: #007b85; */
     cursor: pointer;
     opacity: 1;
     pointer-events: none;
