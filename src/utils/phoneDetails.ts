@@ -12,7 +12,7 @@ export const phoneDetails = [
     description:
       "6.1-inch Dynamic AMOLED 2X display. Super durable Gorilla Glass Victus2. Snapdragon 8 Gen 2. 50 MP main camera. IP68 Water and Dust resistance. Supercharged by EE’s 5G network.",
     green: ["black"],
-    capacity: "128GB",
+    capacity: ["128GB", "256GB"],
     monthly: "$45.00",
     oneOff: "$8.33",
     monthlyPriceBeforeSale: "$53.00",
@@ -27,7 +27,7 @@ export const phoneDetails = [
     description:
       "6.1-inch Dynamic AMOLED 2X display. Super durable Gorilla Glass Victus2. Snapdragon 8 Gen 2. 50 MP main camera. IP68 Water and Dust resistance. Supercharged by EE’s 5G network.",
     green: ["black"],
-    capacity: "128GB",
+    capacity: ["128GB", "256GB", "512GB"],
     monthly: "$45.00",
     oneOff: "$8.33",
     monthlyPriceBeforeSale: "$53.00",
@@ -42,7 +42,7 @@ export const phoneDetails = [
     description:
       "6.1-inch Dynamic AMOLED 2X display. Super durable Gorilla Glass Victus2. Snapdragon 8 Gen 2. 50 MP main camera. IP68 Water and Dust resistance. Supercharged by EE’s 5G network.",
     green: ["black"],
-    capacity: "128GB",
+    capacity: ["128GB"],
     monthly: "$57.00",
     oneOff: "$8.33",
     monthlyPriceBeforeSale: "",
@@ -57,7 +57,7 @@ export const phoneDetails = [
     description:
       "6.1-inch Dynamic AMOLED 2X display. Super durable Gorilla Glass Victus2. Snapdragon 8 Gen 2. 50 MP main camera. IP68 Water and Dust resistance. Supercharged by EE’s 5G network.",
     green: ["black"],
-    capacity: "128GB",
+    capacity: ["128GB"],
     monthly: "$65.00",
     oneOff: "$8.33",
     monthlyPriceBeforeSale: "",
@@ -72,7 +72,7 @@ export const phoneDetails = [
     description:
       "6.1-inch Dynamic AMOLED 2X display. Super durable Gorilla Glass Victus2. Snapdragon 8 Gen 2. 50 MP main camera. IP68 Water and Dust resistance. Supercharged by EE’s 5G network.",
     green: ["black"],
-    capacity: "128GB",
+    capacity: ["128GB", "512GB"],
     monthly: "$59.00",
     oneOff: "$100.00",
     monthlyPriceBeforeSale: "",
@@ -87,7 +87,7 @@ export const phoneDetails = [
     description:
       "6.1-inch Dynamic AMOLED 2X display. Super durable Gorilla Glass Victus2. Snapdragon 8 Gen 2. 50 MP main camera. IP68 Water and Dust resistance. Supercharged by EE’s 5G network.",
     green: ["black"],
-    capacity: "128GB",
+    capacity: ["128GB", "256GB"],
     monthly: "$52.00",
     oneOff: "$8.33",
     monthlyPriceBeforeSale: "$56.00",
@@ -102,7 +102,7 @@ export const phoneDetails = [
     description:
       "6.1-inch Dynamic AMOLED 2X display. Super durable Gorilla Glass Victus2. Snapdragon 8 Gen 2. 50 MP main camera. IP68 Water and Dust resistance. Supercharged by EE’s 5G network.",
     green: ["black"],
-    capacity: "128GB",
+    capacity: ["128GB"],
     monthly: "$61.00",
     oneOff: "$8.33",
     monthlyPriceBeforeSale: "",
@@ -117,7 +117,7 @@ export const phoneDetails = [
     description:
       "6.1-inch Dynamic AMOLED 2X display. Super durable Gorilla Glass Victus2. Snapdragon 8 Gen 2. 50 MP main camera. IP68 Water and Dust resistance. Supercharged by EE’s 5G network.",
     green: ["black"],
-    capacity: "128GB",
+    capacity: ["128GB"],
     monthly: "$38.00",
     oneOff: "$8.33",
     monthlyPriceBeforeSale: "$46.00",
@@ -132,7 +132,7 @@ export const phoneDetails = [
     description:
       "6.1-inch Dynamic AMOLED 2X display. Super durable Gorilla Glass Victus2. Snapdragon 8 Gen 2. 50 MP main camera. IP68 Water and Dust resistance. Supercharged by EE’s 5G network.",
     green: ["black"],
-    capacity: "128GB",
+    capacity: ["128GB"],
     monthly: "$57.00",
     oneOff: "$8.33",
     monthlyPriceBeforeSale: "$61.00",

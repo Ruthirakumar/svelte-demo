@@ -1,21 +1,29 @@
 <script>
+  // @ts-nocheck
+
   import { onMount } from "svelte";
 
-  import Card from "../../../components/Card/Card.svelte";
   import RecommdenedCard from "../../../components/Card/RecommdenedCard.svelte";
   import SlideControlles from "../../../lib/components/slideControlles.svelte";
+  import Button from "../../../components/Button/Button.svelte";
   import { phoneDetails } from "../../../utils/phoneDetails";
 
   export let data;
   /**
-   * @type {{ id: string; name: string; description: string; green: string[]; capacity: string; monthly: string; oneOff: string; monthlyPriceBeforeSale: string; oneOffPriceBeforeSale: string; availability: string; image: string; } | undefined}
+   * @type {{ id: string; name: string; description: string; green: string[]; capacity: string[]; monthly: string; oneOff: string; monthlyPriceBeforeSale: string; oneOffPriceBeforeSale: string; availability: string; image: string; } | undefined}
    */
+
   let product;
-  console.log(typeof data.productId);
+  let selectedButton = 0;
+  let selectedButtonCapcity = "128GB";
   onMount(() => {
     product = phoneDetails.find((p) => p.id === data.productId);
-    console.log(product);
   });
+
+  function capacitySelectedHandler(capacity, id) {
+    selectedButton = id;
+    selectedButtonCapcity = capacity;
+  }
 </script>
 
 <div class="product_hero">
@@ -59,13 +67,21 @@
             >
           </div>
           <p class="capacityLabel">
-            Capacity:<span class="capacityValue">{product?.capacity}</span>
+            Capacity:<span class="capacityValue">{selectedButtonCapcity}</span>
           </p>
           <div class="capacityField">
-            <button class="capacity capacityActive" type="button">128GB</button>
-            <button class="capacity capacityActive" type="button">512GB</button>
+            {#if product?.capacity.length > 0}
+              {#each product?.capacity as capacity, i}
+                <Button
+                  storgaeSize={capacity}
+                  on:click={() => capacitySelectedHandler(capacity, i)}
+                  isSelected={selectedButton === i}
+                />
+              {/each}
+            {/if}
           </div>
         </div>
+
         <!-- stock  -->
         <div class="stock">
           <p
@@ -76,8 +92,8 @@
             >{product?.availability}
           </p>
         </div>
-        <!--article recommended plans -->
       </div>
+      <!--article recommended plans -->
       <RecommdenedCard />
     </div>
   </div>
@@ -228,20 +244,6 @@
     padding: 0;
     border: none;
   }
-  .capacity {
-    margin: 12px 12px 0 0;
-    font-family: rubrik-regular, sans-serif;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    font-weight: 700;
-    border-radius: 23px;
-    cursor: pointer;
-  }
-  .capacityActive {
-    color: #3c3d41;
-    border: 2px solid #3c3d41;
-    padding: 6px 23px;
-  }
 
   .stock {
     font-family: rubrik-regular, sans-serif;
@@ -262,5 +264,4 @@
     color: #6d6e71;
     font-weight: 700;
   }
-  
 </style>

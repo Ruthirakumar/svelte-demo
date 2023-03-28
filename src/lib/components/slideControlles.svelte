@@ -7,7 +7,6 @@
   }
 
   function goToPage1() {
-    alert("ji");
     currentPage = currentPage - 1;
   }
 </script>
