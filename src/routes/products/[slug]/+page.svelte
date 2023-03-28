@@ -7,7 +7,7 @@
   import SlideControlles from "../../../lib/components/slideControlles.svelte";
   import Button from "../../../components/Button/Button.svelte";
   import { phoneDetails } from "../../../utils/phoneDetails";
-  import ProductList from "../../../components/ProductDetailSection/productList.svelte";
+  import ProductList from "../../../components/ProductDetailSection.svelte/productList.svelte";
 
   export let data;
   /**
@@ -97,7 +97,12 @@
           </div>
         </div>
         <!--article recommended plans -->
-        <RecommdenedCard />
+        <RecommdenedCard
+          isFeatureListReq={false}
+          headingLabel={product?.headingLabel}
+          monthlyData={product?.monthlyData}
+          totalMonth={product?.totalMonth}
+        />
       </div>
     </div>
   </div>

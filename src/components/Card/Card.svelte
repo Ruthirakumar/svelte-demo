@@ -7,6 +7,7 @@
     bannerText,
     image;
   let isFeatureListReq;
+  
 
   export let isButtonShow = false;
   import logo from "$lib/images/iPhone.svg";

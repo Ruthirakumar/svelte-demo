@@ -35,8 +35,9 @@
     >
   {/each}
 </container>
-<Accordion data={TermsAndConditionMock} />
-
+<div class="accordion">
+  <Accordion data={TermsAndConditionMock} />
+</div>
 <section />
 
 <style>
@@ -45,6 +46,8 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 1rem;
     padding: 0;
+    max-width: 64rem;
+    align-self: center;
   }
   single-container {
     flex: 1;
@@ -60,5 +63,10 @@
 
   h1 {
     width: 100%;
+  }
+  .accordion {
+    display: grid;
+    max-width: 64rem;
+    align-self: center;
   }
 </style>

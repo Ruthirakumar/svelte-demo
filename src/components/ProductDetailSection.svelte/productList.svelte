@@ -1,21 +1,41 @@
 <script>
   import RecommdenedCard from "../Card/RecommdenedCard.svelte";
+  import { phoneDetails } from "../../utils/phoneDetails";
+  import { onMount ,beforeUpdate } from "svelte";
 
   let totalNumberOfCards = 5;
+  let slicedProducts=[];
 
   function showMoreHandler() {
-    totalNumberOfCards = totalNumberOfCards + 5;
+   
+    slicedProducts=phoneDetails.slice(0,slicedProducts.length+9)
+    
   }
+ onMount(() => {
+  slicedProducts=phoneDetails.slice(0,9)
+
+  });
+ 
 </script>
 
-<div>
+
   <div class="section-container">
-    {#each Array(totalNumberOfCards) as _, index (index)}
-      <RecommdenedCard isFeatureListReq={true} />
+    {#if slicedProducts.length >0 }
+  {#each  slicedProducts as product, index (index)}
+      <RecommdenedCard
+        isFeatureListReq={true}
+        headingLabel={product?.headingLabel}
+        monthlyData={product?.monthlyData}
+        totalMonth={product?.totalMonth}
+      />
     {/each}
+    {/if}
+
+    
   </div>
 
   <div class="showMoreContainer">
+    {#if slicedProducts.length !== phoneDetails.length}
     <button class="showMoreBtn" on:click={showMoreHandler}
       ><svg
         class="showMoreButtonCircleIcon__CRV5t"
@@ -31,15 +51,15 @@
         /></svg
       ></button
     >
+    {/if}
   </div>
-</div>
+
 
 <style>
+  
   .section-container {
     display: flex;
     align-items: center;
-    width: 100rem;
-    left: -156px;
     position: relative;
     padding: 5px;
     margin-top: 28px;

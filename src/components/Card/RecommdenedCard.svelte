@@ -1,11 +1,23 @@
 <script>
   import Card from "./Card.svelte";
   export let isFeatureListReq = false;
+  /**
+   * @type {any}
+   */
+  export let headingLabel;
+  export let monthly;
+  export let oneOff;
+  export let monthlyPriceBeforeSale;
+  export let oneOffPriceBeforeSale;
+  export let isButtonShow;
+  export let bannerText;
+  export let monthlyData;
+  export let totalMonth;
 </script>
 
 <div class="card_panel">
   <Card
-    name={"Business essinalas"}
+    name={"sjkadkjsadnjk"}
     monthly={"24 months"}
     oneOff={"$8.33"}
     monthlyPriceBeforeSale={"$53.00"}
@@ -19,9 +31,9 @@
     <div class="tileHeader">
       <div class="tileHeaderCopy">
         <div class="tileHeadings">
-          <p class="tileTagline">Business Essential</p>
-          <h3 class="tileTitle">Unlimited</h3>
-          <p class="tileSubtitle">24 Months</p>
+          <p class="tileTagline">{headingLabel}</p>
+          <h3 class="tileTitle">{monthlyData}</h3>
+          <p class="tileSubtitle">{totalMonth}</p>
         </div>
       </div>
     </div>
