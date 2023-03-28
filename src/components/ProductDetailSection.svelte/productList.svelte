@@ -27,6 +27,9 @@
         headingLabel={product?.headingLabel}
         monthlyData={product?.monthlyData}
         totalMonth={product?.totalMonth}
+        oneOff={product?.oneOff}
+        monthly={product?.monthly}
+        featureList={product?.featureList}
       />
     {/each}
     {/if}

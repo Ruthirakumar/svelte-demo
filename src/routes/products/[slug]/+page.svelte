@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   // @ts-nocheck
 
   import { onMount } from "svelte";
@@ -6,17 +6,16 @@
   import RecommdenedCard from "../../../components/Card/RecommdenedCard.svelte";
   import SlideControlles from "../../../lib/components/slideControlles.svelte";
   import Button from "../../../components/Button/Button.svelte";
-  import { phoneDetails } from "../../../utils/phoneDetails";
   import ProductList from "../../../components/ProductDetailSection.svelte/productList.svelte";
+  import { phoneDetails } from "../../../utils/phoneDetails";
+  import type { ProductDetailTypes } from "../../../lib/types/productDetails";
 
   export let data;
-  /**
-   * @type {{ id: string; name: string; description: string; green: string[]; capacity: string[]; monthly: string; oneOff: string; monthlyPriceBeforeSale: string; oneOffPriceBeforeSale: string; availability: string; image: string; } | undefined}
-   */
 
-  let product;
+  let product: ProductDetailTypes;
   let selectedButton = 0;
   let selectedButtonCapcity = "128GB";
+
   onMount(() => {
     product = phoneDetails.find((p) => p.id === data.productId);
   });
@@ -102,6 +101,8 @@
           headingLabel={product?.headingLabel}
           monthlyData={product?.monthlyData}
           totalMonth={product?.totalMonth}
+          oneOff={product?.oneOff}
+          monthly={product?.monthly}
         />
       </div>
     </div>

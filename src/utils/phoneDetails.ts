@@ -48,7 +48,6 @@ export const phoneDetails = [
       "Unlimited calls, texts & data",
       "Stay Connected Data",
       "Extended Warranty",
-      "Annual Device Check-Up",
     ],
     headingLabel: "Business Essential",
     monthlyData: "Unlimited",
@@ -95,7 +94,6 @@ export const phoneDetails = [
       "Unlimited calls, texts & data",
       "Stay Connected Data",
       "Extended Warranty",
-      "Annual Device Check-Up",
     ],
     headingLabel: "Business All Rounder",
     monthlyData: "10GB data",
@@ -117,7 +115,6 @@ export const phoneDetails = [
     banner_text: "",
     featureList: [
       "Unlimited calls, texts & data",
-      "Stay Connected Data",
       "Extended Warranty",
       "Annual Device Check-Up",
     ],
@@ -141,7 +138,6 @@ export const phoneDetails = [
     banner_text: "SAVE £329",
     featureList: [
       "Unlimited calls, texts & data",
-      "Stay Connected Data",
       "Extended Warranty",
       "Annual Device Check-Up",
     ],
@@ -164,7 +160,6 @@ export const phoneDetails = [
     image: logo,
     banner_text: "",
     featureList: [
-      "Unlimited calls, texts & data",
       "Stay Connected Data",
       "Extended Warranty",
       "Annual Device Check-Up",
@@ -189,7 +184,6 @@ export const phoneDetails = [
     banner_text: "",
     featureList: [
       "Unlimited calls, texts & data",
-      "Stay Connected Data",
       "Choice of 1 Inclusive Extra",
       "Annual Device Check-Up",
     ],
@@ -215,7 +209,6 @@ export const phoneDetails = [
       "Unlimited calls, texts & data",
       "Stay Connected Data",
       "Choice of 1 Inclusive Extra",
-      "Annual Device Check-Up",
     ],
     headingLabel: "Business All Rounder",
     monthlyData: "50GB data",
@@ -263,7 +256,6 @@ export const phoneDetails = [
     featureList: [
       "Unlimited calls, texts & data",
       "Stay Connected Data",
-      "Extended Warranty",
       "Annual Device Check-Up",
     ],
     headingLabel: "Business Essential",
@@ -308,7 +300,6 @@ export const phoneDetails = [
     image: logo4,
     banner_text: "",
     featureList: [
-      "Unlimited calls, texts & data",
       "Stay Connected Data",
       "Extended Warranty",
       "Annual Device Check-Up",
@@ -335,7 +326,6 @@ export const phoneDetails = [
       "Unlimited calls, texts & data",
       "Stay Connected Data",
       "Extended Warranty",
-      "Annual Device Check-Up",
     ],
     headingLabel: "Business All Rounder",
     monthlyData: "50GB data",
@@ -357,7 +347,6 @@ export const phoneDetails = [
     banner_text: "SAVE £329",
     featureList: [
       "Unlimited calls, texts & data",
-      "Stay Connected Data",
       "Extended Warranty",
       "Annual Device Check-Up",
     ],
@@ -382,7 +371,6 @@ export const phoneDetails = [
     featureList: [
       "Unlimited calls, texts & data",
       "Stay Connected Data",
-      "Extended Warranty",
       "Annual Device Check-Up",
     ],
     headingLabel: "Business All Rounder",
@@ -407,7 +395,6 @@ export const phoneDetails = [
       "Unlimited calls, texts & data",
       "Stay Connected Data",
       "Choice of 1 Inclusive Extra",
-      "Annual Device Check-Up",
     ],
     headingLabel: "Business All Rounder",
     monthlyData: "Unlimited",
@@ -428,7 +415,6 @@ export const phoneDetails = [
     image: logo5,
     banner_text: "",
     featureList: [
-      "Unlimited calls, texts & data",
       "Stay Connected Data",
       "Choice of 1 Inclusive Extra",
       "Annual Device Check-Up",
