@@ -1,5 +1,6 @@
 <script>
   import Card from "./Card.svelte";
+  export let isFeatureListReq = false;
 </script>
 
 <div class="card_panel">
@@ -12,7 +13,8 @@
     image={"phonedata.image"}
     class="cardStyle"
     isButtonShow={true}
-    bannerText={"RECOMMENDED PLAN"}
+    bannerText={""}
+    {isFeatureListReq}
   >
     <div class="tileHeader">
       <div class="tileHeaderCopy">
@@ -23,6 +25,60 @@
         </div>
       </div>
     </div>
+
+    <!-- features -->
+    {#if isFeatureListReq}
+      <ul class="tileList">
+        <li class="tileListItem">
+          <svg
+            class="tileListIcon"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            ><path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M8.09598 18.214L3.85298 13.97C3.67082 13.7814 3.57003 13.5288 3.5723 13.2666C3.57458 13.0044 3.67975 12.7536 3.86516 12.5682C4.05057 12.3828 4.30138 12.2776 4.56358 12.2753C4.82577 12.273 5.07838 12.3738 5.26698 12.556L8.80298 16.091L18.703 6.191C18.7953 6.09556 18.9057 6.01946 19.0277 5.96713C19.1498 5.91481 19.281 5.88732 19.4138 5.88626C19.5466 5.8852 19.6782 5.9106 19.8011 5.96097C19.9239 6.01133 20.0355 6.08567 20.1294 6.17962C20.2232 6.27358 20.2974 6.38529 20.3476 6.50822C20.3978 6.63115 20.423 6.76284 20.4217 6.89562C20.4205 7.0284 20.3928 7.1596 20.3403 7.28156C20.2878 7.40353 20.2115 7.51382 20.116 7.606L9.50998 18.214C9.32245 18.4015 9.06814 18.5068 8.80298 18.5068C8.53781 18.5068 8.2835 18.4015 8.09598 18.214Z"
+              fill="#009c9c"
+            /></svg
+          >Unlimited calls, texts &amp; data
+        </li>
+        <li class="tileListItem">
+          <svg
+            class="tileListIcon"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            ><path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M8.09598 18.214L3.85298 13.97C3.67082 13.7814 3.57003 13.5288 3.5723 13.2666C3.57458 13.0044 3.67975 12.7536 3.86516 12.5682C4.05057 12.3828 4.30138 12.2776 4.56358 12.2753C4.82577 12.273 5.07838 12.3738 5.26698 12.556L8.80298 16.091L18.703 6.191C18.7953 6.09556 18.9057 6.01946 19.0277 5.96713C19.1498 5.91481 19.281 5.88732 19.4138 5.88626C19.5466 5.8852 19.6782 5.9106 19.8011 5.96097C19.9239 6.01133 20.0355 6.08567 20.1294 6.17962C20.2232 6.27358 20.2974 6.38529 20.3476 6.50822C20.3978 6.63115 20.423 6.76284 20.4217 6.89562C20.4205 7.0284 20.3928 7.1596 20.3403 7.28156C20.2878 7.40353 20.2115 7.51382 20.116 7.606L9.50998 18.214C9.32245 18.4015 9.06814 18.5068 8.80298 18.5068C8.53781 18.5068 8.2835 18.4015 8.09598 18.214Z"
+              fill="#009c9c"
+            /></svg
+          >Extended Warranty
+        </li>
+        <li class="tileListItem">
+          <svg
+            class="tileListIcon"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            ><path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M8.09598 18.214L3.85298 13.97C3.67082 13.7814 3.57003 13.5288 3.5723 13.2666C3.57458 13.0044 3.67975 12.7536 3.86516 12.5682C4.05057 12.3828 4.30138 12.2776 4.56358 12.2753C4.82577 12.273 5.07838 12.3738 5.26698 12.556L8.80298 16.091L18.703 6.191C18.7953 6.09556 18.9057 6.01946 19.0277 5.96713C19.1498 5.91481 19.281 5.88732 19.4138 5.88626C19.5466 5.8852 19.6782 5.9106 19.8011 5.96097C19.9239 6.01133 20.0355 6.08567 20.1294 6.17962C20.2232 6.27358 20.2974 6.38529 20.3476 6.50822C20.3978 6.63115 20.423 6.76284 20.4217 6.89562C20.4205 7.0284 20.3928 7.1596 20.3403 7.28156C20.2878 7.40353 20.2115 7.51382 20.116 7.606L9.50998 18.214C9.32245 18.4015 9.06814 18.5068 8.80298 18.5068C8.53781 18.5068 8.2835 18.4015 8.09598 18.214Z"
+              fill="#009c9c"
+            /></svg
+          >Annual Device Check-Up
+        </li>
+      </ul>
+    {/if}
     <button class="ModalOpener tileButton" type="button"
       ><svg
         class="Icon"
@@ -115,5 +171,28 @@
   }
   .tileButton {
     justify-content: center;
+  }
+
+  .tileList {
+    margin: 0 0 20px;
+    padding: 0;
+    list-style-type: none;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: #6d6e71;
+  }
+
+  .tileListItem {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 8px;
+  }
+
+  .tileListIcon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    flex-shrink: 0;
+    fill: #3fd1d1;
   }
 </style>

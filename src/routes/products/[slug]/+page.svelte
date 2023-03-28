@@ -7,6 +7,7 @@
   import SlideControlles from "../../../lib/components/slideControlles.svelte";
   import Button from "../../../components/Button/Button.svelte";
   import { phoneDetails } from "../../../utils/phoneDetails";
+  import ProductList from "../../../components/ProductDetailSection/productList.svelte";
 
   export let data;
   /**
@@ -26,77 +27,82 @@
   }
 </script>
 
-<div class="product_hero">
-  <div class="product_hero_container">
-    <div class="slider">
-      <div class="background_layer" />
-      <div class="slider_container">
-        <div class="imageContainer">
-          <img
-            class="image"
-            src="https://business.ee.co.uk/content/dam/eeb-site/new-devices/samsung-enterprise/phones/galaxy-s23-enterprise-edition/phantom-black/1-samsung-s23-base-etrprs-p-blk.png"
-            alt="3-samsung-s23-base-pblk"
-          />
+<div>
+  <div class="product_hero">
+    <div class="product_hero_container">
+      <div class="slider">
+        <div class="background_layer" />
+        <div class="slider_container">
+          <div class="imageContainer">
+            <img
+              class="image"
+              src="https://business.ee.co.uk/content/dam/eeb-site/new-devices/apple/phones/iphone-14/iphone-14-plus/product-red/01-iPhone-14-Plus-ProductRED-PDP.png"
+              alt="3-samsung-s23-base-pblk"
+            />
+          </div>
+          <SlideControlles />
         </div>
-        <SlideControlles />
       </div>
-    </div>
-    <!-- info container -->
-    <div class="info_panel">
-      <div class="info_container">
-        <h1 class="titleStyle">{product?.name}</h1>
-        <p class="description">
-          {product?.description}
-        </p>
-        <div class="productOptions">
-          <p class="colorLabel">
-            Colour:<span class="colorValue">Phantom Black</span>
+      <!-- info container -->
+      <div class="info_panel">
+        <div class="info_container">
+          <h1 class="titleStyle">{product?.name}</h1>
+          <p class="description">
+            {product?.description}
           </p>
-          <div class="colorField">
-            <button class="colorCircle colorCircleActive" type="button"
-              ><div
-                class="colorCircleInner"
-                style="background-color: rgb(33, 30, 22);"
-              /></button
-            >
-            <button class="colorCircle colorCircleActive" type="button"
-              ><div
-                class="colorCircleInner"
-                style="background-color: rgb(33, 30, 22);"
-              /></button
-            >
+          <div class="productOptions">
+            <p class="colorLabel">
+              Colour:<span class="colorValue">Phantom Black</span>
+            </p>
+            <div class="colorField">
+              <button class="colorCircle colorCircleActive" type="button"
+                ><div
+                  class="colorCircleInner"
+                  style="background-color: rgb(33, 30, 22);"
+                /></button
+              >
+              <button class="colorCircle colorCircleActive" type="button"
+                ><div
+                  class="colorCircleInner"
+                  style="background-color: rgb(33, 30, 22);"
+                /></button
+              >
+            </div>
+            <p class="capacityLabel">
+              Capacity:<span class="capacityValue">{selectedButtonCapcity}</span
+              >
+            </p>
+            <div class="capacityField">
+              {#if product?.capacity.length > 0}
+                {#each product?.capacity as capacity, i}
+                  <Button
+                    storgaeSize={capacity}
+                    on:click={() => capacitySelectedHandler(capacity, i)}
+                    isSelected={selectedButton === i}
+                  />
+                {/each}
+              {/if}
+            </div>
           </div>
-          <p class="capacityLabel">
-            Capacity:<span class="capacityValue">{selectedButtonCapcity}</span>
-          </p>
-          <div class="capacityField">
-            {#if product?.capacity.length > 0}
-              {#each product?.capacity as capacity, i}
-                <Button
-                  storgaeSize={capacity}
-                  on:click={() => capacitySelectedHandler(capacity, i)}
-                  isSelected={selectedButton === i}
-                />
-              {/each}
-            {/if}
-          </div>
-        </div>
 
-        <!-- stock  -->
-        <div class="stock">
-          <p
-            class="stockType stockType--in-stock"
-            style="color: rgb(23, 136, 4);"
-          >
-            <span class="stockTypeLabel">Availability:</span
-            >{product?.availability}
-          </p>
+          <!-- stock  -->
+          <div class="stock">
+            <p
+              class="stockType stockType--in-stock"
+              style="color: rgb(23, 136, 4);"
+            >
+              <span class="stockTypeLabel">Availability:</span
+              >{product?.availability}
+            </p>
+          </div>
         </div>
+        <!--article recommended plans -->
+        <RecommdenedCard />
       </div>
-      <!--article recommended plans -->
-      <RecommdenedCard />
     </div>
   </div>
+  <!-- section -->
+  <ProductList />
 </div>
 
 <style>

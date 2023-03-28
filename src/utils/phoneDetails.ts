@@ -4,6 +4,7 @@ import logo2 from "$lib/images/Samsung Galaxy S23.svg";
 import logo3 from "$lib/images/iPhone 14 Pro Max.svg";
 import logo4 from "$lib/images/Samsung Galaxy S23 Ultra.svg";
 import logo5 from "$lib/images/GoodAsNew.svg";
+import logo6 from "$lib/images/iPhone 14 Pro max.png";
 
 export const phoneDetails = [
   {

@@ -6,6 +6,7 @@
     oneOffPriceBeforeSale,
     bannerText,
     image;
+  let isFeatureListReq;
 
   export let isButtonShow = false;
   import logo from "$lib/images/iPhone.svg";
@@ -57,11 +58,14 @@
   </card-footer>
   {#if isButtonShow}
     <div class="tileCtaBox tileLinks">
-      <button class="tileCta">Choose this plan</button><button
-        class="tileCta tileCta-secondary">See all plans</button
-      >
+      <button class="tileCta">Choose this plan</button>
+      {#if isFeatureListReq}
+        <button class="tileCta tileCta-secondary">See all plans</button>
+      {/if}
     </div>
-    <p class="tileNote">Price excludes VAT</p>
+    {#if isFeatureListReq}
+      <p class="tileNote">Price excludes VAT</p>
+    {/if}
   {/if}
 </card>
 
