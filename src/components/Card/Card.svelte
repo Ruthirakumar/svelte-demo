@@ -22,12 +22,15 @@
   {/if}
 
   <slot>
-    <img
-      src={image}
-      height="200px"
-      width="200px"
-      on:hover={changeInImageSize}
-    />
+    <figure class="tileMedia">
+      <img
+        class="tileImage"
+        src={image}
+        height="245px"
+        on:hover={changeInImageSize}
+      />
+    </figure>
+
     <heading>{name}</heading>
     <hr />
   </slot>
@@ -183,5 +186,19 @@
     font-size: 0.875rem;
     line-height: 1.25rem;
     font-weight: 600;
+  }
+  .tileMedia {
+    margin: 0 0 24px;
+    width: auto;
+    height: 245px;
+  }
+  .tileImage {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
   }
 </style>

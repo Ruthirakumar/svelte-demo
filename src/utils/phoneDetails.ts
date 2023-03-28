@@ -1,9 +1,11 @@
-import logo from "$lib/images/iPhone.svg";
+import logo from "$lib/images/iPhone14Plus.png";
 import logo1 from "$lib/images/Samsung Galaxy S23 Enterprise ED.svg";
-import logo2 from "$lib/images/Samsung Galaxy S23.svg";
-import logo3 from "$lib/images/iPhone 14 Pro Max.svg";
-import logo4 from "$lib/images/Samsung Galaxy S23 Ultra.svg";
+import logo2 from "$lib/images/1-samsung-s23-plus-grn.png";
+import logo3 from "$lib/images/iPhone 14 Pro Max.png";
+import logo4 from "$lib/images/1-samsung-s23-ultra-grn.png";
 import logo5 from "$lib/images/GoodAsNew.svg";
+import logo6 from "$lib/images/1-samsung-s23-base-grn.png";
+import logo7 from "$lib/images/1-samsung-s23-base-etrprs-p-blk.png";
 
 export const phoneDetails = [
   {
@@ -18,7 +20,7 @@ export const phoneDetails = [
     monthlyPriceBeforeSale: "$53.00",
     oneOffPriceBeforeSale: "",
     availability: "In stock",
-    image: logo2,
+    image: logo6,
     banner_text: "New",
     featureList: [
       "Unlimited calls, texts & data",
@@ -42,7 +44,7 @@ export const phoneDetails = [
     monthlyPriceBeforeSale: "$53.00",
     oneOffPriceBeforeSale: "",
     availability: "In stock",
-    image: logo1,
+    image: logo7,
     banner_text: "SAVE £150",
     featureList: [
       "Unlimited calls, texts & data",

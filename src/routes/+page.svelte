@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { goto } from "$app/navigation";
 
   import Card from "../components/Card/Card.svelte";
@@ -7,10 +7,7 @@
   import { phoneDetails } from "../utils/phoneDetails";
   const tcs = ["A", "ddjh", "ghb", "ygjhb"];
 
-  /**
-   * @param {string} productId
-   */
-  function goToPage(productId) {
+  function goToPage(productId: string) {
     goto(`/products/${productId}`);
   }
 </script>

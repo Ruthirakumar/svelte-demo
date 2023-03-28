@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
   import RecommdenedCard from "../Card/RecommdenedCard.svelte";
   import { phoneDetails } from "../../utils/phoneDetails";
   import { onMount ,beforeUpdate } from "svelte";
 
-  let totalNumberOfCards = 5;
+
   let slicedProducts=[];
 
   function showMoreHandler() {

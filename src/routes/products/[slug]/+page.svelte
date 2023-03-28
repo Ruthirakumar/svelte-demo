@@ -35,7 +35,7 @@
           <div class="imageContainer">
             <img
               class="image"
-              src="https://business.ee.co.uk/content/dam/eeb-site/new-devices/apple/phones/iphone-14/iphone-14-plus/product-red/01-iPhone-14-Plus-ProductRED-PDP.png"
+              src={product?.image}
               alt="3-samsung-s23-base-pblk"
             />
           </div>

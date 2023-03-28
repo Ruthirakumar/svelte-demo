@@ -4,7 +4,7 @@
 </script>
 
 <div class="slide_controllers">
-  <div class="pagination">
+  <div>
     <div class="paginationContainer">
       <button class="control_farward" type="button" aria-label="Next"
         ><svg
@@ -76,13 +76,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     cursor: pointer;
     opacity: 1;
     pointer-events: none;
     transform: rotate(90deg);
+    opacity: 1;
   }
 
   .control_backward {
@@ -90,8 +91,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     cursor: pointer;
     opacity: 1;
